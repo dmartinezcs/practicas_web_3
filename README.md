@@ -1,2 +1,2 @@
 # practicas_web_3
-Repositorio para práctica 4 de front
+Repositorio para práctica 3 de front
