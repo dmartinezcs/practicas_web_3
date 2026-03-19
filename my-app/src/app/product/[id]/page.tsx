@@ -12,7 +12,11 @@ export default async function ProductDetail({ params }: Props) {
 
   return (
     <SectionContainer>
-      <Link href="/">← Volver</Link>
+      <Link href="/">
+        <button>
+          Volver
+        </button>
+      </Link>
 
       <div className="grid md:grid-cols-2 gap-6 mt-4">
         

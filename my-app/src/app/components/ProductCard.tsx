@@ -10,6 +10,7 @@ interface Props {
 
 export default function ProductCard({ product }: Props) {
   return (
+    <CardWrapper>
         <div className="card">
       <img
         src={product.thumbnail}
@@ -34,5 +35,6 @@ export default function ProductCard({ product }: Props) {
       </Link>
       </div>
       </div>
+      </CardWrapper>
   );
 }
