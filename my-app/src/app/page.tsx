@@ -25,7 +25,7 @@ export default function HomePage() {
     <SectionContainer>
       <SearchBar setSearchQuery={setSearchQuery} />
 
-      <p className="mt-2 text-sm text-gray-600">
+      <p>
         {filteredProducts.length} resultados
       </p>
 

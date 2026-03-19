@@ -1,6 +1,7 @@
 import { getProduct } from "@/lib/api/product";
 import SectionContainer from "@/app/components/SectionContainer";
 import Link from "next/link";
+import "./style.css"
 
 interface Props {
   params: { id: string };
@@ -17,40 +18,41 @@ export default async function ProductDetail({ params }: Props) {
           Volver
         </button>
       </Link>
+        <h1 className="title">{product.title}</h1>
 
-      <div className="grid md:grid-cols-2 gap-6 mt-4">
-        
-        {/* Galería */}
-        <div className="flex flex-col gap-2">
+
+        <div className="imageProd">
           {product.images.map((img, i) => (
-            <img key={i} src={img} className="rounded-md" />
+            <img key={i} src={img} className="image" />
           ))}
         </div>
 
-        {/* Info */}
         <div>
-          <h1 className="text-2xl font-bold">{product.title}</h1>
+          
 
-          <p className="text-gray-600">{product.description}</p>
+          <p>{product.description}</p>
 
-          <p className="mt-2">Marca: {product.brand}</p>
+          <p><b>Marca:</b> {product.brand}</p>
 
-          <p>Rating: {product.rating} ⭐</p>
+          <p><b>Rating:</b> {product.rating} Estrellas</p>
 
-          <p className="text-xl font-semibold mt-2">
-            €{product.price}
+          <p >
+            <b>Precio:</b> {product.price}€
           </p>
 
           <p>
-            Stock:{" "}
+            <b>Stock:</b>{" "}
             {product.stock < 10
-              ? `⚠️ Quedan pocas unidades (${product.stock})`
+              ? ` Quedan pocas unidades (${product.stock})`
               : product.stock}
           </p>
 
-          {product.weight && <p>Peso: {product.weight}g</p>}
+          <p>
+            <b>Dimensiones:</b> {product.dimensions.width} cm x{" "}
+          {product.dimensions.height} cm x {product.dimensions.depth} cm
+          </p>
+          {product.weight && <p><b>Peso:</b> {product.weight}g</p>}
         </div>
-      </div>
     </SectionContainer>
   );
 }

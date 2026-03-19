@@ -1,7 +1,7 @@
 import Link from "next/link";
-import CardWrapper from "./CardWrapper";
 import { Product } from "@/types/product";
 import styles from "./style.css";
+import SectionContainer from "./SectionContainer";
 
 
 interface Props {
@@ -10,13 +10,9 @@ interface Props {
 
 export default function ProductCard({ product }: Props) {
   return (
-    <CardWrapper>
-        <div className="card">
-      <img
-        src={product.thumbnail}
-        alt={product.title}
-        className="image"
-      />
+    <SectionContainer>
+    <div className="card">
+      <img src={product.thumbnail}/>
       <div className= "content">
       <h3 className="title">{product.title}</h3>
 
@@ -34,7 +30,8 @@ export default function ProductCard({ product }: Props) {
         </button>
       </Link>
       </div>
+      
       </div>
-      </CardWrapper>
+      </SectionContainer>
   );
 }

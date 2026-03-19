@@ -4,13 +4,14 @@ interface Props {
   setSearchQuery: (value: string) => void;
 }
 
-export default function SearchBar({ setSearchQuery }: Props) {
+const SearchBar=({ setSearchQuery }: Props) =>{
   return (
     <input
       type="text"
       placeholder="Buscar productos..."
-      className="w-full border p-2 rounded-md"
+      className="SearchBar"
       onChange={(e) => setSearchQuery(e.target.value)}
     />
   );
 }
+export default SearchBar;

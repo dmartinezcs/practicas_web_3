@@ -1,0 +1,22 @@
+.title {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.imageProd {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.image {
+  width: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+p {
+  margin: 8px 0;
+}
+
