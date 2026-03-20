@@ -46,10 +46,10 @@ export default async function ProductDetail({ params }: Props) {
               ? ` Quedan pocas unidades (${product.stock})`
               : product.stock}
           </p>
-
+          
           <p>
-            <b>Dimensiones:</b> {product.dimensions.width} cm x{" "}
-          {product.dimensions.height} cm x {product.dimensions.depth} cm
+            <b>Dimensiones:</b>{product.dimensions?.width} cm x{" "}
+          {product.dimensions?.height} cm x {product.dimensions?.depth} cm
           </p>
           {product.weight && <p><b>Peso:</b> {product.weight}g</p>}
         </div>
